@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1#txt1{
+            background-color: gray;
+            width: 222px;
+            border: solid;
+            padding: 16px 28px;
+            border-radius: 50px;
+            position: relative;
+            }
+        input#txtpais{
+            border: 1px solid #1c1e21;
+            border-radius: 50px;
+            color: #1c1e21;
+            line-height: 16px;
+            padding: 16px 28px;
+            text-align: center;
+            font: normal 15pt Arial;
+            position: relative;
+        }
+        input#txtenviar{
+            font: normal 15pt Arial;
+            background-color: gray;
+            width: 80px;
+            padding: 16px 28px;
+            border-radius: 50px;
+        }
+      </style>
+</head>
+<body>
+    <h1 id="txt1">Qual é seu pais?</h1>
+    <input type="text" name="Pais" id="txtpais">
+    <input type="button" value="ok" id="txtenviar" onclick="clicar()">
+
+    <div id="res">
+        <p>Resultado</p>
+    </div>
+
+    <script>
+        function clicar() {
+        var txtpais = document.getElementById('txtpais')
+        var res = document.getElementById('res')
+        if( txtpais == "brasil"){
+            res.innerHTML = `Brasileiro`
+        }else{
+            res.innerHTML = `<p>Enstrangeiro</p>`
+        }
+        }
+        
+    </script>
+</body>
+</html>
