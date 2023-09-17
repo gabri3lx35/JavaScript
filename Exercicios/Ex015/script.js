@@ -2,7 +2,12 @@ function verificar(){
     const data = new Date()
     const ano = data.getFullYear()
     const fano = document.getElementById('txtano')
-    const res = document.getElementById('resposta')
+    let res = document.getElementById('resposta')
+    let resposta01 = document.getElementById('resf')
+    let resf = ''
+   
+    
+
     if(fano.value.length == 0 || fano.value > ano){
         window.alert('{Erro} Verifique os dados e tente Novamente')
     }else{
@@ -14,26 +19,29 @@ function verificar(){
         if(fsex[0].checked){
             genero = 'Homem'
             if(idade >= 0 && idade < 10){
-                img.setAttribute('src', 'imagens/')
+                img.setAttribute('src', 'imagens/CriancaHomem01.png')
             }else if (idade < 21){
-                //jovem
+                resf = 'Jovem'
             }else if(idade < 50){
-                //adulto
+                 resf = 'Adulto'
             }else{
-                //idoso
+                resf = 'Idoso'
             }
         }else if(fsex[1].checked){
             genero = 'Mulher'
             if (idade >= 0 && idade < 10){
-                //criança
+                img.setAttribute('src', 'imagens/CriancaMulher01.png')
             }else if(idade < 21){
-                //jovem
+                resf = 'Jovem'
             }else if (idade < 50){
-                //adulto
+                resf = 'Adulto'
             }else{
-                //idoso
+                resf = 'Idoso'
             }
         }
         res.innerHTML = `Genero, ${genero} e idade ${idade} anos: `
+        res.appendChild(img)
+        resposta01.innerHTML = resf
+    
     }
 }
