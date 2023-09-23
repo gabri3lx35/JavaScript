@@ -1,12 +1,16 @@
 function contar(){
-    let i = document.getElementById('N-inicio')
-    let f = document.getElementById('N-final')
-    let p = document.getElementById('N-passo')
+    let i = document.getElementById('txti')
+    let f = document.getElementById('txtf')
+    let p = document.getElementById('txtp')
 
     let res = document.getElementById('res')
-    if(i || f || p == 0){
-       alert('ERRO')
+
+    if(i.value.lenght == 0 || f.value.lenght == 0 || p.value.lenght == 0){
+        window.alert('ERRO falta dados')
     }else{
-        alert('gg')
+        alert('tudo certo')
     }
+   
 }
+
+

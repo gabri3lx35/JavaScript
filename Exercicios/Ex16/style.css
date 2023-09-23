@@ -21,9 +21,3 @@ footer{
     font-size: italic;
 }
 
-input{
-    display: block;
-    margin: 5px;
-    border-radius: 2px;
-    padding: 5px;
-}
