@@ -19,5 +19,9 @@ function Adicionar(){
 }
 
 function Finalizar(){
-        
+    let c = 0
+    let res = lista.map()
+    console.log(res)
+
+
 }
