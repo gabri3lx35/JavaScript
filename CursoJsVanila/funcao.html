@@ -8,7 +8,7 @@
         function somar(n1, n2, f){
             soma = n1 + n2;
             f(soma);
-            return soma;
+            return soma
         }
 
         let = imprimeConsole = function (saida){
@@ -34,11 +34,11 @@
         // Metodos Diferentes de criação function
 
         function subtrair (n1,n2,f){
-            r = n1 - n2
-            f(r)
+            r = n1 - n2;
+            f(r);
             return r
-        };
-        console.log(subtrair(100, 50, imprimeConsole))
+        }
+        console.log(subtrair(100, 50, imprimeConsole));
 
         function subtrair1 (n1, n2){
             return n1-n2;
@@ -47,9 +47,17 @@
         let subtrair2 = function (n1, n2){
             return n1-n2;
         }
+        console.log(subtrair2(10,5));
 
-        console.log(subtrair2(10,5))
+        let subtrair3 = (n1, n2) => n1-n2;
+        console.log("sub3: " + subtrair3(100, 30));
 
+        let subtrair4 = (n1, n2) =>{
+            return n1-n2
+        }
+       console.log("sub4: "+ subtrair4(30, 13));
+
+    
 
     </script>
 </head>
