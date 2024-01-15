@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <script>
+        let nome = "Gabriel";
+        console.log(nome);
+        console.log(typeof nome);
+        console.log(nome.length);
+        console.log(nome[5]);
+        console.log(nome[nome.length - 1]);
+        
+        let numero = 1;
+        console.log(typeof numero);
+        let numeroString = String(numero);
+        console.log(typeof numeroString)
+        let sobreNome = "Rodrigues";
+        let idade = 18;
+
+        console.log(nome + " " + sobreNome + "idade: " + idade);
+        console.log(`${nome} ${sobreNome} idade: ${idade}`);
+        console.log("gabriel".charAt(4));
+        console.log(nome.charAt(4));
+        console.log(nome.indexOf('i'));
+        console.log("------------");
+
+        let letra = nome.charAt(3);
+        console.log(letra);
+        console.log(nome.indexOf(letra));
+
+
+        function soma(x, y){
+            soma = (x + y)
+            return soma
+        };
+
+        let conta = soma(10,8);
+        console.log(conta);
+        
+        let nomeCompleto = String.prototype.concat(nome, sobreNome);
+        console.log(nomeCompleto);
+        console.log(nome.concat(' ', sobreNome));
+        let pergunta = "Esta é uma pergunta?";
+        console.log(pergunta);
+        console.log(pergunta.endsWith("?"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

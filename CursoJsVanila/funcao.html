@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função</title>
+    <script>
+        function somar(n1, n2, f){
+            soma = n1 + n2;
+            f(soma);
+            return soma;
+        }
+
+        let = imprimeConsole = function (saida){
+            console.log("Saida Imprime Console:" + saida);
+        }
+        
+        let mensagemAlert = function (saida){
+            window.alert("Alerta:" + saida);
+        }
+
+        let s1 = somar(30, 40, imprimeConsole)
+        let s2 = somar(1, 2, imprimeConsole);
+        let s3 = somar(33, 33, mensagemAlert);
+
+        let s4 = somar(50, 60 , function (saida){
+            document.write(saida);
+        })
+
+        let s5 =  somar(50, 100 , (soma) => {
+            console.log(soma);
+        })
+
+        // Metodos Diferentes de criação function
+
+        function subtrair (n1,n2,f){
+            r = n1 - n2
+            f(r)
+            return r
+        };
+        console.log(subtrair(100, 50, imprimeConsole))
+
+        function subtrair1 (n1, n2){
+            return n1-n2;
+        }
+
+        let subtrair2 = function (n1, n2){
+            return n1-n2;
+        }
+
+        console.log(subtrair2(10,5))
+
+
+    </script>
+</head>
+<body>
+    função
+</body>
+</html>
