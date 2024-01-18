@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function criaPessoa(_nome, _idade, _gmail){
+            let pessoa = {
+                nome: _nome,
+                idade: _idade,
+                gmail: _gmail
+            }
+            return pessoa;
+        }
+// func contrutura define um objeto  chamar ("new func")
+        function Pessoa(_nome){
+            this.nome = _nome
+        }
+
+        let p = new Pessoa("gabriel")
+        console.log(p)
+        let p1 = new Pessoa("Gabriel 2.0")
+        console.log(p1)
+        
+        class Pessoa2{
+            constructor(nome, sobreNome, gmail){
+                this.nome = nome;
+                this.sobreNome = sobreNome;
+                this.gmail = gmail;
+            }
+
+            nomeCompleto (){
+                return `${this.nome} ${this.sobreNome}`;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    test
+</body>
+</html>
