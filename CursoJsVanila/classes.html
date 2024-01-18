@@ -35,6 +35,36 @@
             }
 
         }
+
+        console.log("--------------------------------------------------------------------------------------------------")
+        function matematica1(){
+             this.somar = function(n1,n2){
+                return n1 + n2;
+             }
+        }
+
+        class matematica2{
+
+            somar(n1,n2){
+                return n1 + n2;
+            }
+        }
+
+        let matematica3 = {
+            somar: function(n1,n2){
+                return n1 + n2;
+            }
+        }
+
+        let m1 = new matematica1();
+        console.log(m1.somar(10,30));
+        
+        let m2 = new matematica2();
+        console.log(m2.somar(20,30));
+
+        console.log(matematica3.somar(10,100))
+
+
     </script>
 </head>
 <body>
