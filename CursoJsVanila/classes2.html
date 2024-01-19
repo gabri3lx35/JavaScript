@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Pessoa{
+            constructor(nome, sobreNome,idade){
+                this.nome = nome;
+                this.sobreNome = sobreNome;
+                this.idade = idade;
+            }
+
+            nomeCompleto = () =>{
+                return `${this.nome} ${this.sobreNome} ${this.idade}`
+            }
+        }
+        
+        class Matematica{
+            constructor(n1,n2){
+                this.n1 = n1;
+                this.n2 = n2;
+            }
+
+            static somar(n1,n2){
+                return (n1 + n2)
+            }
+
+            somar(){
+                return `${(this.n1 + this.n2)}:`
+            }
+
+        }
+
+
+
+        let p1 = new Pessoa("gabriel", "Rodrigues", 18)
+        let p2 = new Pessoa("pedrinho", "pedroca", 31)
+        let mat = new Matematica(12,13)
+        console.log(p1.nomeCompleto())
+        let soma = Matematica.somar(p1.idade, p2.idade)
+        console.log(mat.somar())
+        console.log(soma)
+
+
+    </script>
+</head>
+<body>
+    test
+</body>
+</html>
