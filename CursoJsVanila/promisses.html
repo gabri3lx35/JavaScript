@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classes</title>
     <script>
-        function somar(n1, n2, call){
+        function somar(n1, n2, sucesso, erro){
             let soma = n1 + n2;
-            call(soma)
-            return s
+            if(n1 != 0 && n2 != 0){
+                sucesso("continue")
+            }else{
+                erro("Impossivel Dividir por zero")
+            }
+            
         }
 
-        somar(20, 30, (s) => {
-            console.log(`Soma é igual a: ${s}`)
+       // somar(20, 30, (s) => {
+       //     console.log(`Soma é igual a: ${s}`)
+       //  })
+
+        somar(0, 40, (s) =>{
+            console.log(s)
+        }, (e)=> {
+            console.log(e)
         })
 
-        
     </script>
 </head>
 <body>
