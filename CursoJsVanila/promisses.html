@@ -5,26 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classes</title>
     <script>
-        function somar(n1, n2, sucesso, erro){
-            let soma = n1 + n2;
-            if(n1 != 0 && n2 != 0){
-                sucesso("continue")
-            }else{
-                erro("Impossivel Dividir por zero")
-            }
-            
+        function div(n1, n2){
+            return new Promise((resolve, reject)=> {
+                let div = n1 / n2
+                if(n1 != 0 && n2 != 0){
+                    resolve(div)
+                }else{
+                    reject("Impossivel Dividir por zero")
+                };
+            });
         }
 
        // somar(20, 30, (s) => {
        //     console.log(`Soma é igual a: ${s}`)
        //  })
 
-        somar(0, 40, (s) =>{
-            console.log(s)
-        }, (e)=> {
-            console.log(e)
-        })
+        div(20,2)
+        .then((r)=> r + (r * 10/100))
+        .then((r) => console.log(`Total: ${r}`))
+        .catch((r) => console.log(r))
 
+        //.then "certo"
+        //.catch "errado"
+        function calcularJuros(r){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    let juros = r + (r * 10/100)
+                if(juros >= 0){
+                    resolve(juros)
+                }else{
+                    reject("error")
+                }
+                }, 3000)
+                
+            })
+            
+        }
+
+        function msg(r){
+            return console.log(`Resultado Final = ${r}`)
+        }
+
+        async function calc(){
+            let divisao = await div(100,2)
+            let juros = await calcularJuros(divisao)
+            msg(juros)
+        }
+        calc()
     </script>
 </head>
 <body>
