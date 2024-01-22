@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        fetch("https://api.giphy.com/v1/gifs/search?api_key=yv0O7TsNd7ajjunHvF8BCkQzZ2EGQhqd&q=ZeroTwo&limit=3").then((r)=>{
+            return r.json();
+        }).then((_json)=>{
+            for(i=0; i < _json.data.length;i++){
+                let url= _json.data[i].images.original.url
+                let img = document.createElement("img")
+                img.src = url
+                document.body.appendChild(img)
+            }
+            
+        });
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
