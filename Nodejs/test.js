@@ -9,3 +9,4 @@ let texto = JSON.stringify(pessoa);
 let obj = JSON.parse(texto)
 console.log(texto);
 console.log(obj.nome)
+
