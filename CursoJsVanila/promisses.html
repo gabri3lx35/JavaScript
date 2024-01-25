@@ -51,7 +51,29 @@
             let juros = await calcularJuros(divisao)
             msg(juros)
         }
+
+        
         calc()
+
+        let n1 = 10;
+        let n2 = 20;
+
+        //terminar amanhã 25/01
+        function menos(n1,n2){
+            return n1-n2;
+        }
+        function calcMenor(n1,n2){
+            return new Promise((resolve, rejec)=>{
+                let res = menos(n1,n2);
+                if(res > 10){
+                    resolve("Maior que 10")
+                }else{
+                    rejec("menor ou igual 10")
+                }
+
+            })
+        }
+        calcMenor()
     </script>
 </head>
 <body>
